@@ -1,0 +1,222 @@
+/* Estilos del campo de texto y botón */
+#answer-section {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="text"].error {
+    border: 2px solid red;
+}
+
+button {
+    padding: 10px 15px;
+    margin-left: 10px;
+    font-size: 20px;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #111;
+    font-family: 'Aladdin', cursive;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #e6b800;
+}
+
+#error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* estilo de la pagina */
+@font-face {
+    font-family: 'Aladdin';
+    src: url('../fuentes/aladdin.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('../src/fondo.jpeg');
+    background-size: cover;
+    /*Hacequelaimagencubratodalapantalla*/height: 100vh;
+    background-repeat: no-repeat;
+    /*Evitaquelaimagenserepita*/background-position: center;
+    /*Centralaimagen*/color: #fff;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 1s ease-out;
+}
+
+header, p {
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-family: 'Aladdin', cursive;
+    font-size: 48px;
+    color: #FFD700; /* Color dorado */
+    text-shadow: 2px 2px 4px #000000;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-family: 'Aladdin', cursive;
+    font-size: 28px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+p {
+    text-shadow: 2px 2px 4px #000000;
+    color: #ffe44c; /* Color dorado */
+}
+
+section {
+    background-color: rgba(255, 255, 255, 0.24);
+    padding: 20px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    width: 800px;
+}
+
+.mastamaño {
+    background-color: rgba(255, 255, 255, 0.24);
+    padding: 20px;
+    width: 1000px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+/* Estilo para el cuerpo o la sección */
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-out; /* Desvanecimiento de 1 segundo */
+}
+
+body.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#regalos {
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#pista1, #pista2, #pista3, 
+#pista4, #pista5, #pista6, 
+#pista7, #pista8, #pista9, 
+#pista10, #pista11, #pista12, 
+#pista13, #pista14, #pista15, 
+#pista16, #pista17, #pista18, 
+#pista19, #pista20, #pista21, 
+#pista22, #pista23, #pista24, 
+#pista25, #pista26, #pista27, 
+#pista28, #pista29, #pista30 {
+    display: none;
+    margin-top: 10px;
+}
+
+.pistas {
+    margin-top: 10px;
+}
+
+.pistas div {
+    margin-top: 10px;
+}
+
+.prueba2 {
+    text-align: left;
+}
+
+.centrar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* prueba 7 */
+#passwordDisplay {
+    font-size: 24px;
+    margin-top: 20px;
+    font-family: "Courier New", Courier, monospace;
+    letter-spacing: 10px;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+#info {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#finalMessage {
+    font-size: 20px;
+    color: #FFD700;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Transición suave para mostrar el div de regalos */
+#regalos {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#regalos.mostrar {
+    opacity: 1;
+}
+
+.regalo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    background-color: white;
+    color: black;
+    margin: 20px;
+}
+
+.regalo p {
+    color: black;
+    text-shadow: 0px 0px 0px #000000;
+}

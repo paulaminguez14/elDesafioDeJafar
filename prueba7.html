@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Séptima prueba</title>
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+</head>
+<body>
+    <header>
+        <h1>Prueba 7: El mensaje del Genio</h1>
+    </header>
+    <main>
+        <section>
+            <p>El Genio te ha dejado un mensaje encriptado. Descrifralo para avanzar.</p>
+            <div>
+                <button id="hackButton" class="start">Desencriptar</button>
+                <p id="info" class="hidden">Estableciendo conexión...</p>
+                <p id="finalMessage" class="hidden">PROCESO FINALIZADO<br>¿no parece que esté desordenado?</p>
+            </div>
+            <div>
+                <p id="passwordDisplay" class="hidden"> </p>
+            </div>
+            <h3>¿Qué mensaje oculta?</h3>
+            <div>
+                <button onclick="mostrarPista19()">Pista 1</button>
+                <button onclick="mostrarPista20()">Pista 2</button>
+                <button onclick="mostrarPista21()">Pista 3</button>
+            </div>
+            <div>
+                <p id="pista19">Supongo que has pulsado las teclas para poder desencriptar... ¿Has ordenado ya las letras?</p>
+                <p id="pista20">Parece que no es solo una palabra... ¿pueden ser dos?</p>
+                <p id="pista21">Te ______... </p>
+            </div>
+            <div id="answer-section">
+                <input type="text" id="inputField" placeholder="Escribe aquí..." />
+                <button onclick="prueba7()">Comprobar</button>
+                <p id="error-message"></p>
+            </div>
+        </section>
+    </main>
+    <script>
+        // Variables para el estado del proceso de hackeo
+        var hackingInProgress = false;
+        var password = "quieetor";
+        var currentDisplay = ""; // Almacena el texto que se está mostrando
+        var fixedLetters = [];  // Array para almacenar las letras fijadas
+        var currentLetterIndex = 0; // Indica qué letra debe cambiar
+        var passwordDisplay = document.getElementById("passwordDisplay");
+
+        // Función para iniciar el hackeo
+        function iniciarHackeo() {
+            var hackButton = document.getElementById("hackButton");
+            var info = document.getElementById("info");
+            var finalMessage = document.getElementById("finalMessage");
+
+            // Cambiar el estado para evitar que se haga clic mientras se está hackeando
+            hackingInProgress = true;
+            hackButton.classList.add("hidden"); // Ocultar el botón de hackeo
+
+            // Mostrar el mensaje de "hacking"
+            info.classList.remove("hidden");
+            passwordDisplay.classList.remove("hidden");
+
+            // Inicializar el display con guiones bajos
+            fixedLetters = [];
+            currentDisplay = "_".repeat(password.length);
+            passwordDisplay.textContent = currentDisplay;
+        }
+
+        // Función para simular el cambio de la letra no fija
+        function changeLetter() {
+            // Solo cambiamos la letra que no ha sido fijada
+            var currentChar = currentDisplay.split('');
+            if (currentChar[currentLetterIndex] === "_") {
+                currentChar[currentLetterIndex] = Math.random().toString(36).charAt(2); // Cambiar por una letra aleatoria
+            }
+            passwordDisplay.textContent = currentChar.join('');
+        }
+
+        // Función para detener el hackeo y fijar letras con cada pulsación
+        function stopHack(event) {
+            if (!hackingInProgress) return;
+
+            // Si hay letras que fijar, fijamos la siguiente
+            if (fixedLetters.length < password.length) {
+                // Fijamos la letra actual
+                fixedLetters.push(password.charAt(fixedLetters.length));
+                // Actualizamos la palabra actual con la letra fija
+                var currentChar = currentDisplay.split('');
+                currentChar[currentLetterIndex] = password.charAt(fixedLetters.length - 1);
+                currentDisplay = currentChar.join('');
+                passwordDisplay.textContent = currentDisplay;
+                currentLetterIndex++; // Avanzamos a la siguiente letra
+            }
+
+            // Si ya se han fijado todas las letras, mostramos el mensaje final
+            if (fixedLetters.length === password.length) {
+                var info = document.getElementById("info");
+                var finalMessage = document.getElementById("finalMessage");
+                info.classList.add("hidden");
+                finalMessage.classList.remove("hidden");
+                hackingInProgress = false;
+            }
+        }
+
+        // Agregar el evento de clic al botón de hackeo
+        document.getElementById("hackButton").addEventListener("click", iniciarHackeo);
+
+        // Configurar intervalos para cambiar las letras
+        setInterval(changeLetter, 100); // Cambiar la letra no fijada cada 100ms
+
+        // Agregar el evento de tecla para fijar letras
+        document.addEventListener("keydown", stopHack);
+
+        // Función para continuar después de que el proceso se ha completado
+        document.getElementById("continueButton")?.addEventListener("click", function() {
+            alert("¡Proceso completado! Puedes continuar.");
+        });
+    </script>
+    <script src="js/index.js"></script>
+</body>
+</html>

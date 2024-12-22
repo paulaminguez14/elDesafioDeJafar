@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segunda Prueba</title>
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+</head>
+<body>
+    <header>
+        <h1>Prueba 2: El Mercado de Agrabah</h1>
+    </header>
+    <main>
+        <section class="prueba2">
+            <p><strong>Inmensas telas de colores brillantes cubren los puestos del mercado de Agrabah. Alfombras de seda, especias aromáticas y frutas frescas se exponen por todas partes. El bullicio de los vendedores llama la atención de los viajeros que pasan.</strong></p>
+            <p><strong>Nadie puede evitar quedarse mirando los objetos más exóticos. Desde lámparas antiguas hasta joyas relucientes, el mercado parece un lugar mágico que guarda grandes secretos.</strong></p>
+            <p><strong>Detrás de un puesto, un vendedor sonríe al mostrar algo especial. "Esta alfombra tiene un precio que solo los astutos sabrán encontrar", dice con un brillo en los ojos.</strong></p>
+            <p><strong>Impresionado, Aladdin observa el objeto que el vendedor señala. Pero sabe que debe buscar bien para descubrir lo que realmente importa en ese mercado lleno de misterios.</strong></p>
+            <p><strong>Ahora, ¿serás capaz de encontrar la palabra oculta? Solo los más atentos lo lograrán.</strong></p>
+            <div class="centrar">
+                <div>
+                    <button onclick="mostrarPista4()">Pista 1</button>
+                    <button onclick="mostrarPista5()">Pista 2</button>
+                    <button onclick="mostrarPista6()">Pista 3</button>
+                </div>
+                <div>
+                    <p id="pista4">El texto parece esconder algo...</p>
+                    <p id="pista5">Empieza por "I"</p>
+                    <p id="pista6">¿Tendré que empezar a leer verticalmente?</p>
+                </div>
+                <div id="answer-section">
+                    <input type="text" id="inputField" placeholder="Escribe aquí..." />
+                    <button onclick="prueba2()">Comprobar</button>
+                    <p id="error-message"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/index.js"></script>
+</body>
+</html>

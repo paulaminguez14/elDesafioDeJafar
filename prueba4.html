@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuarta prueba</title>
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+</head>
+<body>
+    <header>
+        <h1>Prueba 4: Crucigrama</h1>
+    </header>
+    <main>
+        <section>
+            <p>Resuelve este crucigrama. ¿Cuál es la palabra oculta?</p>
+            <img src="src/crucigrama.png" alt="Crucigrama" width="500"><br>
+            <div>
+                <button onclick="mostrarPista10()">Pista 1</button>
+                <button onclick="mostrarPista11()">Pista 2</button>
+                <button onclick="mostrarPista12()">Pista 3</button>
+            </div>
+            <div>
+                <p id="pista10">1. Aladdin lo hace para sobrevivir y por ello es perseguido por los guardias.<br>
+                    2. Jasmine y Aladdin lo cantan mientras vuelan por el cielo nocturno.<br>
+                    3. Habita en un objeto mágico y concede tres deseos.<br>
+                    4. Es una ciudad ficticia inspirada en Oriente Medio.<br>
+                    5. Este objeto inanimado tiene vida propia y es uno de los amigos más cercanos de Aladdin.<br>
+                    6. Jasmine es reconocida por este título real.<br>
+                    7. Es el título real que ostenta el padre de Jasmine.<br>
+                    8. Es un animal que soporta condiciones extremas del desierto.<br>
+                    9. Es la forma en que Jafar se transforma para luchar contra Aladdin.</p>
+                <p id="pista11">1. Su acción da inicio a su primer encuentro con Jasmine en el mercado.<br>
+                    2. Jasmine y Aladdin lo cantan mientras vuelan por el cielo nocturno.<br>
+                    3. Robin Williams lo interpretó en la versión original de la película.<br>
+                    4. Es el lugar donde Aladdin vive aventuras y encuentra el amor.<br>
+                    5. Es el medio de transporte durante la canción "Un mundo ideal".<br>
+                    6. Es el título que describe a la hija del Sultán.<br>
+                    7. Gobierna Agrabah desde el gran palacio.<br>
+                    8. Tiene jorobas donde almacena grasa para sobrevivir.<br>
+                    9. Es un reptil largo y venenoso, típico en regiones cálidas.</p>
+                <p id="pista12">1. Acto de tomar algo que no es tuyo.<br>
+                    2. Un mundo Id...<br>
+                    3. Es el personaje azul que canta "¡Nunca tendrás un amigo igual a mí!".<br>
+                    4. La ciudad donde se encuentra el palacio del Sultán y de Jasmine.<br>
+                    5. Puede volar y llevarte donde quieras, solo necesitas subirte a ella.<br>
+                    6. Es el equivalente femenino de un príncipe.<br>
+                    7. Su título es común en los reinos del Medio Oriente.<br>
+                    8. Es un animal típico del desierto que se usa como medio de transporte.<br>
+                    9. Es el animal en el que Jafar se convierte al final de la película.</p>
+            </div>
+            <div id="answer-section">
+                <input type="text" id="inputField" placeholder="Escribe aquí..." />
+                <button onclick="prueba4()">Comprobar</button>
+                <p id="error-message"></p>
+            </div>
+        </section>
+    </main>
+    <script src="js/index.js"></script>
+</body>
+</html>

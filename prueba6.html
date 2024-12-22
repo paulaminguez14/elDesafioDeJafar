@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sexta prueba</title>
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+</head>
+<body>
+    <header>
+        <h1>Prueba 6: El Grabado</h1>
+    </header>
+    <main>
+        <section>
+            <p>Tenemos la oportunidad de ver la lámpara del Genio, pero... ¿Qué son esos dibujos?</p>
+            <img src="src/prueba6.jpg" alt="Genio" width="400"><br>
+            <div>
+                <button onclick="mostrarPista16()">Pista 1</button>
+                <button onclick="mostrarPista17()">Pista 2</button>
+                <button onclick="mostrarPista18()">Pista 3</button>
+            </div>
+            <div>
+                <p id="pista16">Parece que hay algo oculto en las esquinas... pero, ¿En todas?</p>
+                <p id="pista17">Está en todas las esquinas... Tendrás que subir el brillo para verlo.</p>
+                <p id="pista18">Creo que esos símbolos de la lámpara coinciden con algo... ¿no?</p>
+            </div>
+            <div id="answer-section">
+                <input type="text" id="inputField" placeholder="Escribe aquí..." />
+                <button onclick="prueba6()">Comprobar</button>
+                <p id="error-message"></p>
+            </div>
+        </section>
+    </main>
+    <script src="js/index.js"></script>
+</body>
+</html>

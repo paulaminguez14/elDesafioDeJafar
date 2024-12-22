@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <title>Primera Prueba</title>
+</head>
+<body>
+    <header>
+        <h1>Prueba 1. La Cueva de las Maravillas</h1>
+    </header>
+    <main>
+        <section>
+            <p><strong>Hemos llegado a Agrabah, pero por desgracia la entrada a la Cueva de las Maravillas está sellada. Encuentra el código para abrir la puerta.</strong></p>
+            <p><strong>Debes alternar entre rojo y azul para encontrar el código. No puede haber dos colores iguales seguidos. Hay dos posibles caminos. Encuentra el más corto de ellos.</strong></p>
+            <img src="src/prueba1.jpg" alt="Camino" width="600"><br>
+            <div class="pistas">
+                <div>
+                    <button onclick="mostrarPista1()">Pista 1</button>
+                    <button onclick="mostrarPista2()">Pista 2</button>
+                    <button onclick="mostrarPista3()">Pista 3</button>
+                </div>
+                <div>
+                    <p id="pista1">Ten en cuenta que no puedes ir y volver a la misma letra por donde has llegado, pero sí puedes pasar dos veces por la misma letra.</p>
+                    <p id="pista2">Una ayudita... grfe...</p>
+                    <p id="pista3">¿Aún no? grfeaef... Ya si, ¿no?</p>
+                </div>
+            </div>
+            <div id="answer-section">
+                <input type="text" id="inputField" placeholder="Escribe aquí..." />
+                <button onclick="prueba1()">Comprobar</button>
+                <p id="error-message"></p>
+            </div>
+        </section>
+    </main>
+    <script src="js/index.js"></script>
+</body>
+</html>
