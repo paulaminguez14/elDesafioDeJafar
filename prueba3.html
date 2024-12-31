@@ -15,15 +15,17 @@
             <p>En la sala de la lámpara, hay un espejo con un mensaje al revés... ¿O no es al revés? Viene acompañado de un dibujo...</p>
             <p><strong>Mensaje:</strong> "Ho frgljr hv XQLFR."</p>
             <img src="src/espejo.jpg" alt="Mensaje" width="500"><br>
-            <div>
-                <button onclick="mostrarPista7()">Pista 1</button>
-                <button onclick="mostrarPista8()">Pista 2</button>
-                <button onclick="mostrarPista9()">Pista 3</button>
-            </div>
-            <div>
-                <p id="pista7">Parece que ni del revés se entiende... ¿se habrán movido?</p>
-                <p id="pista8">Quizás las letras se han trasladado de sitio y no es exactamente nuestro abecedario...</p>
-                <p id="pista9">¿Nos marcará la rueda cuánto se han desplazado?</p>
+            <div class="pistas">
+                <div>
+                    <button onclick="mostrarPista7()">Pista 1</button>
+                    <button onclick="mostrarPista8()">Pista 2</button>
+                    <button onclick="mostrarPista9()">Pista 3</button>
+                </div>
+                <div>
+                    <p id="pista7">Parece que ni del revés se entiende... ¿se habrán movido?</p>
+                    <p id="pista8">Quizás las letras se han trasladado de sitio y no es exactamente nuestro abecedario...</p>
+                    <p id="pista9">¿Nos marcará la rueda cuánto se han desplazado?</p>
+                </div>
             </div>
             <div id="answer-section">
                 <input type="text" id="inputField" placeholder="Escribe aquí..." />
