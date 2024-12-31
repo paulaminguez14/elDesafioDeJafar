@@ -15,15 +15,17 @@
             <p>El Genio te pregunta:</p>
             <img src="src/prueba9.jpg" alt="Genio" width="350"><br>
             <h3>¿Cuál es la respuesta?</h3>
-            <div>
-                <button onclick="mostrarPista25()">Pista 1</button>
-                <button onclick="mostrarPista26()">Pista 2</button>
-                <button onclick="mostrarPista27()">Pista 3</button>
-            </div>
-            <div>
-                <p id="pista25">Creo que debes resolver la primera línea... ∛125?</p>
-                <p id="pista26">¿Y la tercera? (19 - ∛125)/2?</p>
-                <p id="pista27">Pues ya solo queda la segunda línea... 55 - (((19 - ∛125)/2) * ∛125)</p>
+            <div class="pistas">
+                <div>
+                    <button onclick="mostrarPista25()">Pista 1</button>
+                    <button onclick="mostrarPista26()">Pista 2</button>
+                    <button onclick="mostrarPista27()">Pista 3</button>
+                </div>
+                <div>
+                    <p id="pista25">Creo que debes resolver la primera línea... ∛125?</p>
+                    <p id="pista26">¿Y la tercera? (19 - ∛125)/2?</p>
+                    <p id="pista27">Pues ya solo queda la segunda línea... 55 - (((19 - ∛125)/2) * ∛125)</p>
+                </div>
             </div>
             <div id="answer-section">
                 <input type="text" id="inputField" placeholder="Escribe aquí..." />
