@@ -14,15 +14,17 @@
         <section>
             <p>Tenemos la oportunidad de ver la lámpara del Genio, pero... ¿Qué son esos dibujos?</p>
             <img src="src/prueba6.jpg" alt="Genio" width="400"><br>
-            <div>
-                <button onclick="mostrarPista16()">Pista 1</button>
-                <button onclick="mostrarPista17()">Pista 2</button>
-                <button onclick="mostrarPista18()">Pista 3</button>
-            </div>
-            <div>
-                <p id="pista16">Parece que hay algo oculto en las esquinas... pero, ¿En todas?</p>
-                <p id="pista17">Está en todas las esquinas... Tendrás que subir el brillo para verlo.</p>
-                <p id="pista18">Creo que esos símbolos de la lámpara coinciden con algo... ¿no?</p>
+            <div class="pistas">
+                <div>
+                    <button onclick="mostrarPista16()">Pista 1</button>
+                    <button onclick="mostrarPista17()">Pista 2</button>
+                    <button onclick="mostrarPista18()">Pista 3</button>
+                </div>
+                <div>
+                    <p id="pista16">Parece que hay algo oculto en las esquinas... pero, ¿En todas?</p>
+                    <p id="pista17">Está en todas las esquinas... Tendrás que subir el brillo para verlo.</p>
+                    <p id="pista18">Creo que esos símbolos de la lámpara coinciden con algo... ¿no?</p>
+                </div>
             </div>
             <div id="answer-section">
                 <input type="text" id="inputField" placeholder="Escribe aquí..." />
