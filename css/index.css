@@ -195,6 +195,9 @@ body.fade-out {
 #regalos {
     opacity: 0;
     transition: opacity 1s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #regalos.mostrar {
